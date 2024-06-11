@@ -34,9 +34,8 @@ The following topics will be practised here on a NUCLEO-F439ZI board:
 
 ### Executing program
 
-#### Bare metal programming with no standard library
-
-* Open a terminal inside the folder, and run "make clean" to remove all previousely generated *.hex, *.elf, *.bin, *.srec etc files, and then run "make all". Then, using OPENOCD, you can program the flash,an even debug the code using GDB or Telnet.
+#### TBD
+* TBD
 
 ## Help
 
