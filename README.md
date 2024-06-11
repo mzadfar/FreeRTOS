@@ -1,6 +1,6 @@
-# Bare Metal Programming
+# RTOS Programming
 
-The purpose of this repository is to start from practicing bare metal programming, and proide a base for embedded code development, then move to using Hardware Abstraction Layer (HAL) of STM32F439ZI developed by ST.
+The purpose of this repository is to start from practicing RTOS programming, and proide a base for embedded code development using Hardware Abstraction Layer (HAL) of STM32F439ZI developed by ST.
 
 ## Description
 
