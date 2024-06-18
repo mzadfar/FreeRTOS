@@ -1,12 +1,20 @@
 # RTOS Programming
 
-The purpose of this repository is to start from practicing RTOS programming, and proide a base for embedded code development using Hardware Abstraction Layer (HAL) of STM32F439ZI developed by ST.
+The purpose of this repository is to start from practicing RTOS programming on FreeRTOS, and proide a base for embedded code development using Hardware Abstraction Layer (HAL) of STM32F439ZI developed by ST.
 
 ## Description
 
 The following topics will be practised here on a NUCLEO-F439ZI board:
-* Bare metal programming with no standard library
-* 
+* Empty project
+* SemiHosting
+* Virtual Com Port
+* Task Yielding
+* Task Call uing Polling
+* Task Call uing Interrupt
+* Task Wait and Notify
+* Task Wait, Notify, and Action
+* Delete task
+* Prioritize tasks
 
 ## Getting Started
 
@@ -34,8 +42,45 @@ The following topics will be practised here on a NUCLEO-F439ZI board:
 
 ### Executing program
 
-#### TBD
-* TBD
+#### Empty project
+
+* This is a FreeRTOS empty example proect to initiate practicing FreeRTOS. First copy "[Libraries](https://github.com/ahasanzadeh/BareMetal/tree/main/008_VirtualComTxCharacter)" folder from project into this prject folder. Open a terminal inside the folder, and run "make clean" to remove all previousely generated *.hex, *.elf, *.bin, *.srec etc files, and then run "make -j all". 
+
+#### SemiHosting
+
+* This is a FreeRTOS semihosting example to debug project using OPENOCD and a console like telnet etc. Follow corresponding oder for "FreeRTOS Empty project" above. No ModelSim simulation for this example.
+
+#### Virtual Com Port
+
+* This is a FreeRTOS example equiped with virtual COM port to communicate with PC. Follow corresponding oder for "FreeRTOS Empty project" above. No ModelSim simulation for this example.
+
+#### Task Yielding
+
+* This is a FreeRTOS proect to implement task yielding. Follow corresponding oder for "FreeRTOS Empty project" above. No ModelSim simulation for this example.
+
+#### Task Call uing Polling
+
+* This is a FreeRTOS proect to call a task using polling. Follow corresponding oder for "FreeRTOS Empty project" above. No ModelSim simulation for this example.
+
+#### Task Call uing Interrupt
+
+* This is a FreeRTOS proect to call a task using interrupt. Follow corresponding oder for "FreeRTOS Empty project" above. No ModelSim simulation for this example.
+
+#### Task Wait and Notify
+
+* This is a FreeRTOS proect to put a task on wait and notify states. Follow corresponding oder for "FreeRTOS Empty project" above. No ModelSim simulation for this example.
+
+#### Task Wait, Notify, and Action
+
+* This is a FreeRTOS proect to put a task on wait, notify, and action states. Follow corresponding oder for "FreeRTOS Empty project" above. No ModelSim simulation for this example.
+
+#### Delete task
+
+* This is a FreeRTOS proect to delete a task. Follow corresponding oder for "FreeRTOS Empty project" above. No ModelSim simulation for this example.
+
+#### Prioritize tasks
+
+* This is a FreeRTOS proect to swith priority of tasks. Follow corresponding oder for "FreeRTOS Empty project" above. No ModelSim simulation for this example.
 
 ## Help
 

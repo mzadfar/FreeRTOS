@@ -106,7 +106,7 @@ FPU = -mfpu=fpv4-sp-d16
 FLOAT-ABI = -mfloat-abi=hard
 
 # mcu
-MCU = $(CPU) -mthumb $(FPU) $(FLOAT-ABI) -mthumb-interwork -mlittle-endian -std=gnu11
+MCU = $(CPU) -mthumb $(FPU) $(FLOAT-ABI) -mthumb-interwork -mlittle-endian -std=gnu11 -u _printf_float
 
 # macros for gcc
 # AS defines

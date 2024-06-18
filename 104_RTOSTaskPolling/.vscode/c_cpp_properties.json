@@ -1,0 +1,44 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}",
+                "${workspaceFolder}/Core/inc",
+                "${workspaceFolder}/Libraries/STM32F4xx_StdPeriph_Driver/inc",
+                "${workspaceFolder}/Libraries/CMSIS/Include",
+                "${workspaceFolder}/Libraries/CMSIS/Device/ST/STM32F4xx/Include",
+                "${workspaceFolder}/Third-Party/FreeRTOS/org/Source",
+                "${workspaceFolder}/Third-Party/FreeRTOS/org/Source/include",
+                "${workspaceFolder}/Third-Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F",
+                "${workspaceFolder}/Config",
+                "/usr/bin"
+            ],
+            "defines": [
+                "USE_STDPERIPH_DRIVER ",
+                "USE_HAL_DRIVER",
+                "STM32F439xx"
+            ],
+            "intelliSenseMode": "linux-gcc-x64",
+            "cStandard": "c11",
+            "cppStandard": "c++20",
+            "browse": {
+                "path": [
+                    "${workspaceFolder}",
+                    "${workspaceFolder}/Core/inc",
+                    "${workspaceFolder}/Libraries/STM32F4xx_StdPeriph_Driver/inc",
+                    "${workspaceFolder}/Libraries/CMSIS/Include",
+                    "${workspaceFolder}/Libraries/CMSIS/Device/ST/STM32F4xx/Include",
+                    "${workspaceFolder}/Third-Party/FreeRTOS/org/Source",
+                    "${workspaceFolder}/Third-Party/FreeRTOS/org/Source/include",
+                    "${workspaceFolder}/Third-Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F",
+                    "${workspaceFolder}/Config",
+                    "/usr/bin"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": "${workspaceFolder}/.vscode/browse.vc.db"
+            }
+        }
+    ],
+    "version": 4
+}
