@@ -44,15 +44,15 @@ The following topics will be practised here on a NUCLEO-F439ZI board:
 
 #### Empty project
 
-* This is a FreeRTOS empty example proect to initiate practicing FreeRTOS. First copy "[Libraries](https://github.com/ahasanzadeh/BareMetal/tree/main/008_VirtualComTxCharacter)" folder from project into this prject folder. Open a terminal inside the folder, and run "make clean" to remove all previousely generated *.hex, *.elf, *.bin, *.srec etc files, and then run "make -j all". 
+* This is a FreeRTOS empty example proect to initiate practicing FreeRTOS. First copy folder"[Libraries](https://github.com/ahasanzadeh/BareMetal/tree/main/008_VirtualComTxCharacter)" into this prject folder. Open a terminal inside the folder, and run "make clean" to remove all previousely generated *.hex, *.elf, *.bin, *.srec etc files, and then run "make -j all". 
 
 #### SemiHosting
 
-* This is a FreeRTOS semihosting example to debug project using OPENOCD and a console like telnet etc. Follow corresponding oder for "FreeRTOS Empty project" above. No ModelSim simulation for this example.
+* This is a FreeRTOS semihosting example to debug project using OPENOCD and a console like telnet etc. Follow corresponding oder for "Empty project" above. No ModelSim simulation for this example.
 
 #### Virtual Com Port
 
-* This is a FreeRTOS example equiped with virtual COM port to communicate with PC. Follow corresponding oder for "FreeRTOS Empty project" above. No ModelSim simulation for this example.
+* This is a FreeRTOS example equiped with virtual COM port to communicate with PC instead of semihosting. Follow corresponding oder for "FreeRTOS Empty project" above. No ModelSim simulation for this example.
 
 #### Task Yielding
 
