@@ -5,101 +5,84 @@
 #which means st-flash command can be used globally
 STLINK = ~/Documents/Workspace/STM32/stlink-testing/bin
 
-######################################
 # target
-######################################
 TARGET = final
 
-######################################
 # building variables
-######################################
 # debug build?
 DEBUG = 1
 
-#######################################
 #Semihosting
-#######################################
 # debug semihosting using OpenOCD
 SEMI_HOSTING = 0
 
-#######################################
 # optimization
-#######################################
 OPT = -O0 # original: -Og
 
-#######################################
 # paths
-#######################################
 BUILD_DIR = build
 
-######################################
-# source
-######################################
 # C sources
 C_SOURCES =  \
 Core/src/main.c \
 Core/src/system_stm32f4xx.c \
-Libraries/STM32F4xx_StdPeriph_Driver/src/misc.c \
-Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_adc.c \
-Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_can.c \
-Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_crc.c \
-Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_cryp.c \
-Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_cryp_aes.c \
-Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_cryp_des.c \
-Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_cryp_tdes.c \
-Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dac.c \
-Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dbgmcu.c \
-Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dcmi.c \
-Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.c \
-Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_exti.c \
-Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_flash.c \
-Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_fsmc.c \
-Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.c \
-Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_hash.c \
-Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_hash_md5.c \
-Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_hash_sha1.c \
-Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.c \
-Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_iwdg.c \
-Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_pwr.c \
-Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.c \
-Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rng.c \
-Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rtc.c \
-Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_sdio.c \
-Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_spi.c \
-Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_syscfg.c \
-Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.c \
-Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.c \
-Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_wwdg.c \
-Third-Party/FreeRTOS/croutine.c \
-Third-Party/FreeRTOS/event_groups.c \
-Third-Party/FreeRTOS/list.c \
-Third-Party/FreeRTOS/queue.c \
-Third-Party/FreeRTOS/stream_buffer.c \
-Third-Party/FreeRTOS/tasks.c \
-Third-Party/FreeRTOS/timers.c \
-Third-Party/FreeRTOS/portable/GCC/ARM_CM4F/port.c \
-Third-Party/FreeRTOS/portable/MemMang/heap_4.c \
-Third-Party/SEGGER/SEGGER/Syscalls/SEGGER_RTT_Syscalls_GCC.c \
-Third-Party/SEGGER/Config/SEGGER_SYSVIEW_Config_FreeRTOS.c \
-Third-Party/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.c \
-Third-Party/SEGGER/SEGGER/SEGGER_RTT.c \
-Third-Party/SEGGER/SEGGER/SEGGER_SYSVIEW.c \
-Third-Party/SEGGER/SEGGER/SEGGER_RTT_printf.c 
+../../Libraries/STM32F4xx_StdPeriph_Driver/src/misc.c \
+../../Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_adc.c \
+../../Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_can.c \
+../../Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_crc.c \
+../../Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_cryp.c \
+../../Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_cryp_aes.c \
+../../Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_cryp_des.c \
+../../Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_cryp_tdes.c \
+../../Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dac.c \
+../../Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dbgmcu.c \
+../../Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dcmi.c \
+../../Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.c \
+../../Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_exti.c \
+../../Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_flash.c \
+../../Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_fsmc.c \
+../../Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.c \
+../../Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_hash.c \
+../../Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_hash_md5.c \
+../../Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_hash_sha1.c \
+../../Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.c \
+../../Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_iwdg.c \
+../../Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_pwr.c \
+../../Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.c \
+../../Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rng.c \
+../../Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rtc.c \
+../../Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_sdio.c \
+../../Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_spi.c \
+../../Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_syscfg.c \
+../../Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.c \
+../../Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.c \
+../../Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_wwdg.c \
+../../Third-Party/FreeRTOS/croutine.c \
+../../Third-Party/FreeRTOS/event_groups.c \
+../../Third-Party/FreeRTOS/list.c \
+../../Third-Party/FreeRTOS/queue.c \
+../../Third-Party/FreeRTOS/stream_buffer.c \
+../../Third-Party/FreeRTOS/tasks.c \
+../../Third-Party/FreeRTOS/timers.c \
+../../Third-Party/FreeRTOS/portable/GCC/ARM_CM4F/port.c \
+../../Third-Party/FreeRTOS/portable/MemMang/heap_4.c \
+../../Third-Party/SEGGER/SEGGER/Syscalls/SEGGER_RTT_Syscalls_GCC.c \
+../../Third-Party/SEGGER/Config/SEGGER_SYSVIEW_Config_FreeRTOS.c \
+../../Third-Party/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.c \
+../../Third-Party/SEGGER/SEGGER/SEGGER_RTT.c \
+../../Third-Party/SEGGER/SEGGER/SEGGER_SYSVIEW.c \
+../../Third-Party/SEGGER/SEGGER/SEGGER_RTT_printf.c 
 
 ifeq ($(SEMI_HOSTING), 0)
 C_SOURCES +=  \
 Core/src/syscalls.c 
 endif
 
-#######################################
 # ASM sources
-#######################################
 ASM_SOURCES =  \
 Startup/startup_stm32f429_439xx.s
 
-#######################################
 # binaries
-#######################################
 PREFIX = arm-none-eabi-
 
 # The gcc compiler bin path can be either defined in make command via GCC_PATH variable (> make GCC_PATH=xxx)
@@ -118,9 +101,7 @@ endif
 HEX = $(CP) -O ihex
 BIN = $(CP) -O binary -S
 
-#######################################
 # CFLAGS
-#######################################
 # cpu
 CPU = -mcpu=cortex-m4
 
@@ -149,15 +130,15 @@ AS_INCLUDES =
 # C includes
 C_INCLUDES =  \
 -ICore/inc \
--ILibraries/STM32F4xx_StdPeriph_Driver/inc \
--ILibraries/CMSIS/Device/ST/STM32F4xx/Include \
--ILibraries/CMSIS/Include \
--IThird-Party/FreeRTOS \
--IThird-Party/FreeRTOS/include \
--IThird-Party/FreeRTOS/portable/GCC/ARM_CM4F \
--IThird-Party/SEGGER/Config \
--IThird-Party/SEGGER/OS \
--IThird-Party/SEGGER/SEGGER
+-I../../Libraries/STM32F4xx_StdPeriph_Driver/inc \
+-I../../Libraries/CMSIS/Device/ST/STM32F4xx/Include \
+-I../../Libraries/CMSIS/Include \
+-I../../Third-Party/FreeRTOS \
+-I../../Third-Party/FreeRTOS/include \
+-I../../Third-Party/FreeRTOS/portable/GCC/ARM_CM4F \
+-I../../Third-Party/SEGGER/Config \
+-I../../Third-Party/SEGGER/OS \
+-I../../Third-Party/SEGGER/SEGGER
 #-IUtilities/STM32_EVAL 
 
 # compile gcc flags
@@ -175,9 +156,7 @@ CFLAGS += -Wno-unused-variable
 # Generate dependency information
 CFLAGS += -MMD -MP -MF"$(@:%.o=%.d)"
 
-#######################################
 # LDFLAGS
-#######################################
 # link script
 LDSCRIPT =   \
 Startup/STM32F439NIHx_FLASH.ld
@@ -194,7 +173,6 @@ endif
 # default action: build all
 all: $(BUILD_DIR)/$(TARGET).elf $(BUILD_DIR)/$(TARGET).hex $(BUILD_DIR)/$(TARGET).bin
 
-#######################################
 # build the application
 #######################################
 # list of objects
@@ -223,16 +201,12 @@ $(BUILD_DIR)/%.bin: $(BUILD_DIR)/%.elf | $(BUILD_DIR)
 $(BUILD_DIR):
 	mkdir $@	
 
-#######################################
 # clean up
-#######################################
 clean:
 	-rm -fR $(BUILD_DIR)
 #rm -rf *.o *.elf *.bin *.hex *.map $(PROJ_NAME).elf $(PROJ_NAME).hex $(PROJ_NAME).bin
 
-#######################################
 # dependencies
-#######################################
 -include $(wildcard $(BUILD_DIR)/*.d)
 
 # Flash with J-Link
