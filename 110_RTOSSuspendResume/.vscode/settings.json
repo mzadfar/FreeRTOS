@@ -1,0 +1,6 @@
+{
+    "cortex-debug.gdbPath": "/usr/bin/arm-none-eabi-gdb",
+    "cortex-debug.JLinkGDBServerPath": "/usr/bin/JLinkGDBServer",
+    "cortex-debug.stutilPath": "/home/ah/Documents/Workspace/STM32/stlink-testing/bin/st-util",
+    "C_Cpp.errorSquiggles": "disabled",
+}
