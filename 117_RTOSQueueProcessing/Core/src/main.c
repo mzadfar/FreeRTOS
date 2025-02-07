@@ -112,6 +112,8 @@ int main(void)
     sprintf(usr_msg, "\r\nThis is Queue Command Processing Demo\r\n");
     USART_SendText(USART3, usr_msg);
 
+    BaseType_t status;
+
     // lets create command queue
     command_queue = xQueueCreate(10, sizeof(APP_CMD_t*));
 
@@ -124,13 +126,16 @@ int main(void)
         status = xTaskCreate(vTask1_menu_display, "TASK1-MENU", 500, NULL, 1, &xTaskHandle1);
         configASSERT(status == pdPASS);
         // lets create task-2
-        status = xTaskCreate(vTask2_cmd_handling, "TASK2-CMD-HANDLING", 500, NULL, 2, &xTaskHandle2);
+        status = xTaskCreate(
+            vTask2_cmd_handling, "TASK2-CMD-HANDLING", 500, NULL, 2, &xTaskHandle2);
         configASSERT(status == pdPASS);
         // lets create task-3
-        status = xTaskCreate(vTask3_cmd_processing, "TASK3-CMD-PROCESS", 500, NULL, 2, &xTaskHandle3);
+        status = xTaskCreate(
+            vTask3_cmd_processing, "TASK3-CMD-PROCESS", 500, NULL, 2, &xTaskHandle3);
         configASSERT(status == pdPASS);
         // lets create task-3
-        status = xTaskCreate(vTask4_uart_write, "TASK4-UART-WRITE", 500, NULL, 2, &xTaskHandle4);
+        status =
+            xTaskCreate(vTask4_uart_write, "TASK4-UART-WRITE", 500, NULL, 2, &xTaskHandle4);
         configASSERT(status == pdPASS);
         // lets start the scheduler
         vTaskStartScheduler();
@@ -423,7 +428,6 @@ void USART3_IRQHandler(void)
     {
         // a data byte is received from the user
         data_byte = USART_ReceiveData(USART3);
-
         command_buffer[command_len++] = (data_byte & 0xFF);
 
         if (data_byte == '\r')
@@ -452,13 +456,17 @@ void USART3_IRQHandler(void)
 
 uint8_t getCommandCode(uint8_t* buffer)
 {
+    if (buffer[0] == '0' || buffer[0] == '1' || buffer[0] == '2' || buffer[0] == '3'
+        || buffer[0] == '4' || buffer[0] == '5' || buffer[0] == '6')
+    {
+        GPIO_ToggleBits(GPIOB, GPIO_Pin_7 | GPIO_Pin_14);
+    }
 
     return buffer[0] - 48;
 }
 
 void getArguments(uint8_t* buffer)
 {
-    // USART_SendText(USART3, (char*)buffer);
     GPIO_ToggleBits(GPIOB, GPIO_Pin_7 | GPIO_Pin_14);
 }
 
