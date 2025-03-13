@@ -639,6 +639,7 @@ static void Peripheral_Setup(void)
 
 static void RCC_Setup(void)
 {
+
     /*Initialize GPIOB for toggling LEDs*/
     /*USART_2 (USART_B_RX: PD6 D52 on CN9, USART_B_TX: PD5 D53 on CN9) & USART_3
      * (USART_A_TX: PD8, USART_A_RX: PD9)*/
@@ -1058,9 +1059,10 @@ void rtosDelayMs(uint32_t ms)
     while (xTaskGetTickCount() < (curretTickCount + msTicks))
         ;
 }
-
-// void print_error_message(char* task_msg)
-// {
-//     sprintf(task_msg, "\r\nInvalid command received\r\n");
-//     xQueueSend(uart_write_queue, &task_msg, portMAX_DELAY);
-// }
+/*
+void print_error_message(char* task_msg)
+{
+    sprintf(task_msg, "\r\nInvalid command received\r\n");
+    xQueueSend(uart_write_queue, &task_msg, portMAX_DELAY);
+}
+*/
