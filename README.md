@@ -24,7 +24,7 @@ The following topics will be practiced here on a NUCLEO-F439ZI board:
 * arm-none-eabi-gcc should be installed.
 * gcc should be installed.
 * cmake should be installed.
-* Download and install [ST-LINK](https://www.st.com/en/development-tools/stsw-link007.html) latest firmware.
+* Download and install [ST-LINK](https://www.st.com/en/development-tools/stsw-link007.html) the latest firmware.
 * In this Fedora 40 OS, Download [ST-LINK](https://koji.fedoraproject.org/koji/buildinfo?buildID=2389744) v1/v2 JTAG/SWD debugging/flashing tool for STM32 microcontrollers
 * After above installation, Cmake still has issue with LIBUSB, and in this Fedora 40 OS using "yum provides */libusb.h"
 * LIBUSB should be installed.
@@ -34,7 +34,7 @@ The following topics will be practiced here on a NUCLEO-F439ZI board:
 
 * Check arm-none-eabi-gcc --version on a terminal. If it has not been installed, Fedora will suggest installing, and go with it.
 * Check cmake --version on a terminal. If it has not been installed, Fedora will suggest installing, and go with it. Typically, it asks for gcc installation during installing cmake if you have not installed gcc yet.
-* Install [ST-LINK](https://www.st.com/en/development-tools/stsw-link007.html) latest firmware using: sudo rpm -Uhv st-stlink-udev-rules-1.0.3-2-linux-noarch.rpm
+* Install [ST-LINK](https://www.st.com/en/development-tools/stsw-link007.html) the latest firmware using: sudo rpm -Uhv st-stlink-udev-rules-1.0.3-2-linux-noarch.rpm
 * In this Fedora 40 OS, install [ST-LINK](https://koji.fedoraproject.org/koji/buildinfo?buildID=2389744) v1/v2 JTAG/SWD debugging/flashing tool for STM32 microcontrollers using: sudo rpm -Uhv stlink-1.7.0-7.fc40.x86_64.rpm
 * cmake has issue with LIBUSB, and in this Fedora 40 OS using "yum provides */libusb.h" command find a version of LIBUSB that suit you, and install it using (in this case): sudo dnf install libusb1-devel-1.0.27-2.fc40.x86_64
 * Download stlink-testing.zip to open a terminal inside the extracted folder and run cmake.
@@ -56,31 +56,31 @@ The following topics will be practiced here on a NUCLEO-F439ZI board:
 
 #### Task Yielding
 
-* This is a FreeRTOS proect to implement task yielding. Follow corresponding order for "FreeRTOS Empty project" above.
+* This is a FreeRTOS project to implement task yielding. Follow corresponding order for "FreeRTOS Empty project" above.
 
 #### Task Call uing Polling
 
-* This is a FreeRTOS proect to call a task using polling. Follow corresponding order for "FreeRTOS Empty project" above. 
+* This is a FreeRTOS project to call a task using polling. Follow corresponding order for "FreeRTOS Empty project" above. 
 
 #### Task Call uing Interrupt
 
-* This is a FreeRTOS proect to call a task using interrupt. Follow corresponding order for "FreeRTOS Empty project" above. 
+* This is a FreeRTOS project to call a task using interrupt. Follow corresponding order for "FreeRTOS Empty project" above. 
 
 #### Task Wait and Notify
 
-* This is a FreeRTOS proect to put a task on wait and notify states. Follow corresponding order for "FreeRTOS Empty project" above. 
+* This is a FreeRTOS project to put a task on wait and notify states. Follow corresponding order for "FreeRTOS Empty project" above. 
 
 #### Task Wait, Notify, and Action
 
-* This is a FreeRTOS proect to put a task on wait, notify, and action states. Follow corresponding order for "FreeRTOS Empty project" above. 
+* This is a FreeRTOS project to put a task on wait, notify, and action states. Follow corresponding order for "FreeRTOS Empty project" above. 
 
 #### Delete task
 
-* This is a FreeRTOS proect to delete a task. Follow corresponding order for "FreeRTOS Empty project" above. 
+* This is a FreeRTOS project to delete a task. Follow corresponding order for "FreeRTOS Empty project" above. 
 
 #### Prioritize tasks
 
-* This is a FreeRTOS proect to swith priority of tasks. Follow corresponding order for "FreeRTOS Empty project" above. 
+* This is a FreeRTOS project to switch priority of tasks. Follow corresponding order for "FreeRTOS Empty project" above. 
 
 ## Help
 
@@ -88,7 +88,7 @@ TBD
 
 ## Authors
 
-Contributors names and contact info
+Contributor names and contact info
 
 TBD
 
